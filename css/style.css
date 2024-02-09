@@ -1,0 +1,233 @@
+.map {
+    position: relative;
+}
+.map img {
+    width: 1360px;
+    height: 680px;
+}
+.map svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1360px;
+    height: 680px;
+}
+.map svg path {
+    fill: none;
+    stroke: #000000;
+    stroke-width: 0.5px;
+    stroke-linecap: butt;
+    stroke-linejoin: miter;
+    stroke-opacity: 1;
+    pointer-events: all; /* Разрешаем быть целью событий мыши */
+    cursor: pointer; /* Меняем курсор при наведении */
+}
+.map svg path:hover {
+    animation: hoverElement 2s linear infinite; /* При наведении включаем анимацию */
+}
+
+@keyframes hoverElement { /* Сама анимация */
+    0% {
+        stroke: #000000;
+    }
+    50% {
+        stroke: #fc0000;
+    }
+    100% {
+        stroke: #000000; 
+    }
+}
+
+.popup.open {
+    opacity: 1;
+    visibility: visible;
+}
+.popup_house {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(40, 120, 27, 0.67);
+    overflow-y: auto;
+    z-index: 2;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease;
+    overflow-x: hidden;
+}
+.modal-object {
+    width: 290px;
+    background: #fff;
+    -webkit-box-shadow: 0 17px 38px rgba(0, 0, 0, 0.38);
+    box-shadow: 0 17px 38px rgba(0, 0, 0, 0.38);
+    margin: auto;
+}
+.img_wrap {
+    position: relative;
+}
+.img_wrap .number {
+    position: absolute;
+    left: 50%;
+    bottom: -22px;
+    top: auto;
+    width: 47px;
+    height: 47px;
+    border-radius: 500px;
+    /* background: #e74322; */
+    line-height: 48px;
+    font-size: 20px;
+    margin-left: -24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modal-object a.close_block {
+    margin: 0 !important;
+    margin-left: 8px !important;
+    color: #8a9dab;
+}
+.img_wrap .close_block {
+    border: none;
+}
+.modal-return {
+    display: block;
+    text-align: left;
+    width: 100%;
+    height: 42px;
+    line-height: 42px;
+    padding-left: 20px;
+    background: url(/bitrix/templates/mobile_redesign/img/arrow-left.svg) 0 50% no-repeat;
+    color: #8a9dab;
+    display: block;
+    font-size: 14px;
+    margin: -20px 0 20px;
+}
+a {
+    color: #30a61d;
+    text-decoration: none;
+}
+a {
+    background-color: transparent;
+}
+.modal-object .description {
+    padding: 30px 0px 0px 0px;
+}
+.modal-object h4, .layout-wrapper .modal-object h4 > a {
+    color: #ff7e00;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+    /* padding: 0px 20px; */
+    border: none;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    font-family: "Bebas Neue", Arial, sans-serif;
+    font-weight: 700;
+    color: #4a4a4a;
+    text-transform: uppercase;
+}
+.modal-object .developer {
+    background: #f4f6f7;
+    display: block;
+    padding: 10px 20px;
+    color: #000;
+    text-align: center;
+}
+.modal-object dl {
+    display: block;
+    border-bottom: 1px solid #eee;
+    padding: 0px 15px;
+}
+.house_info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.strochka {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(219 218 218);
+    padding-bottom: 5px;
+}
+.stolbec {
+    width: 50%;
+    font-size: 14px;
+    text-align: left;
+}
+.stolbec:last-child {
+    text-align: right;
+    font-weight: bold;
+}
+.modal-object .price {
+    display: block;
+    padding: 15px 0px 15px 0px;
+    text-align: center;
+    font-size: 25px;
+    margin-left: 0;
+    float: none;
+    width: 100%;
+    max-width: none;
+}
+.modal-object dd {
+    width: 50%;
+    text-align: left;
+    font-weight: bold;
+}
+.control_panel {
+    width: 100%;
+    padding: 0px 20px 10px 20px;
+}
+.control_panel > button {
+    display: flex;
+    width: 100%;
+    height: 45px;
+    padding: 0;
+    margin-bottom: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (min-width: 1400px){
+.dream-house__button {
+    margin: 0;
+    width: 336px;
+}}
+.dream-house__button {
+    display: block;
+    margin: 0 auto;
+    padding: 23px 45px;
+    width: auto;
+}
+.button {
+    padding: 10px 15px;
+    width: 100%;
+    background: linear-gradient(180deg, #45dc2c 0%, #30a61d 100%);
+    border: none;
+    border-bottom: 2px solid #1f7f10;
+    border-radius: 11px;
+    font-family: "Roboto", Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    letter-spacing: 0.035em;
+    text-align: center;
+    text-shadow: 0px 2.31105px 5.77764px #30a61d;
+    cursor: pointer;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+*, *:before, *:after {
+    box-sizing: border-box;
+}
