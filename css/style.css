@@ -25,7 +25,15 @@
 /* .home:hover {
     animation: hoverElement 2s linear infinite; При наведении включаем анимацию
 } */
-
+.yellow{
+    background-color: #fceb00;
+}
+.green{
+    background-color: #53fd04;
+}
+.red{
+    background-color: #fc0000;
+}
 .home_yelow:hover {
     stroke: #fceb00;
 }
