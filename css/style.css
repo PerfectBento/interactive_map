@@ -22,12 +22,21 @@
     pointer-events: all; /* Разрешаем быть целью событий мыши */
     cursor: pointer; /* Меняем курсор при наведении */
 }
-.map svg path:hover {
-    animation: hoverElement 2s linear infinite; /* При наведении включаем анимацию */
-}
+/* .home:hover {
+    animation: hoverElement 2s linear infinite; При наведении включаем анимацию
+} */
 
-@keyframes hoverElement { /* Сама анимация */
-    0% {
+.home_yelow:hover {
+    stroke: #fceb00;
+}
+.home_green:hover {
+    stroke: #53fd04;
+}
+.home_red:hover {
+    stroke: #fc0000;
+}
+/* @keyframes hoverElement { /* Сама анимация */
+    /* 0% {
         stroke: #000000;
     }
     50% {
@@ -35,8 +44,8 @@
     }
     100% {
         stroke: #000000; 
-    }
-}
+    } */
+/* } */ 
 
 .popup.open {
     opacity: 1;
