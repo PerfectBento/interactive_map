@@ -36,12 +36,15 @@
 }
 .home_yelow:hover {
     stroke: #fceb00;
+    fill: #fceb0085;;
 }
 .home_green:hover {
     stroke: #53fd04;
+    fill: #53fd0483;
 }
 .home_red:hover {
     stroke: #fc0000;
+    fill: #fc000085;
 }
 /* @keyframes hoverElement { /* Сама анимация */
     /* 0% {
