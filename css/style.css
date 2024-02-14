@@ -27,12 +27,15 @@
 } */
 .yellow{
     background-color: #fceb00;
+    color: #6a6a6a;
 }
 .green{
     background-color: #53fd04;
+    color: #6a6a6a;
 }
 .red{
     background-color: #fc0000;
+    color: #fffefe;
 }
 .home_yelow:hover {
     stroke: #fceb00;
