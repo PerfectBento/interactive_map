@@ -2,15 +2,15 @@
     position: relative;
 }
 .map img {
-    width: 1360px;
-    height: 680px;
+    width: 1350px;
+    height: 1049px;
 }
 .map svg {
     position: absolute;
     top: 0;
     left: 0;
-    width: 1360px;
-    height: 680px;
+    width: 1350px;
+    height: 1049px;
 }
 .map svg path {
     fill: none;
