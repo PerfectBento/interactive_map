@@ -35,7 +35,7 @@ $area_homes = getAllAreaHome();
   <div class="modal-window modal-object">
     <div class="img_wrap">
       <div class="number yellow">1</div>
-      <a href="" class="modal-return close_block">Закрыть</a>
+      <div class="modal-return close_block">Закрыть</div>
       <img src="https://test.кп-наследие.рф/img/low-finishing.jpg" alt="Черновая отделка" />
     </div>
     <div class="description">
