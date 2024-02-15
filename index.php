@@ -1,5 +1,10 @@
+<?php
+include 'include/db.php';
+$area_homes = getAllAreaHome();
+
+?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
   <meta charset="UTF-8" />
@@ -11,14 +16,19 @@
 <body>
   <div class="map">
     <img src="images/nasledie.png" />
-    <svg viewBox="0 0 1350 1049">
-      <path class="home_yelow" data-title="Проект дома Каринтия 112"
-        d="m 1222.8839,558.54443 -51.8574,10.10403 16.1962,19.31651 15.4532,10.54979 31.055,12.03567 4.6062,0.29718 27.7861,-1.3373 z">
-      </path>
-
-
-      <!-- Тут будут интерактивные элементы -->
+    <svg viewBox="0 0 3428.5713 2664.127">
+      <?php
+      foreach ($area_homes as $area_home) {
+        echo '
+            <path class="home_yelow" data-title="Проект дома Каринтия 112"
+            d="' . $area_home['d'] . '">
+            </path>
+            ';
+      }
+      ?>
     </svg>
+    <!-- Тут будут интерактивные элементы -->
+
   </div>
 </body>
 <div id="info_on_house" class="popup popup_house">

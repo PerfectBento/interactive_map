@@ -2,9 +2,9 @@
 function conncect()
 {
     $host = 'localhost';
-    $db = 'admin_default';
-    $user = 'admin_default';
-    $pass = 'qIyD95NkzU';
+    $db = 'admin_kpnasledie';
+    $user = 'root';
+    $pass = '';
     $charset = 'utf8';
 
     $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
@@ -23,11 +23,11 @@ function conncect()
     }
 }
 
-function getAllTegs()
+function getAllAreaHome()
 {
     $dbh = conncect();
-    $tags = $dbh->prepare("SELECT * FROM `tag_table_for_seo` where active_on_seo_admin = 1 ORDER BY `sortirovka` ASC");
-    $tags->execute();
-    return $tags->fetchAll(PDO::FETCH_ASSOC);
+    $area_homes = $dbh->prepare("SELECT * FROM `area_home` order by id");
+    $area_homes->execute();
+    return $area_homes->fetchAll(PDO::FETCH_ASSOC);
 }
 ?>
