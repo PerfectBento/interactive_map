@@ -8,6 +8,7 @@ homes_green.forEach(home => {
     home.addEventListener("click", function(){
     //    alert(this.dataset.title);
     popup.querySelector(".title").innerText = this.dataset.title;
+    number.innerText = this.dataset.number;
     popup.classList.add("open");
     number.classList.add("green");
 
@@ -18,6 +19,7 @@ homes_yelow.forEach(home => {
     home.addEventListener("click", function(){
     //    alert(this.dataset.title);
     popup.querySelector(".title").innerText = this.dataset.title;
+    number.innerText = this.dataset.number;
     popup.classList.add("open");
     number.classList.add("yellow");
 
@@ -27,6 +29,7 @@ homes_red.forEach(home => {
     home.addEventListener("click", function(){
     //    alert(this.dataset.title);
     popup.querySelector(".title").innerText = this.dataset.title;
+    number.innerText = this.dataset.number;
     popup.classList.add("open");
     number.classList.add("red");
 

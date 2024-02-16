@@ -20,7 +20,7 @@ $area_homes = getAllAreaHome();
       <?php
       foreach ($area_homes as $area_home) {
         echo '
-            <path class="home_yelow" data-title="Проект дома Каринтия 112"
+            <path class="home_yelow" data-title="Проект дома Каринтия 112" data-number="' . $area_home['id'] . '"
             d="' . $area_home['d'] . '">
             </path>
             ';
@@ -34,7 +34,7 @@ $area_homes = getAllAreaHome();
 <div id="info_on_house" class="popup popup_house">
   <div class="modal-window modal-object">
     <div class="img_wrap">
-      <div class="number yellow">1</div>
+      <div class="number"></div>
       <div class="modal-return close_block">Закрыть</div>
       <img src="https://test.кп-наследие.рф/img/low-finishing.jpg" alt="Черновая отделка" />
     </div>
