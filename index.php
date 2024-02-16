@@ -62,8 +62,12 @@ $area_homes = getAllAreaHome();
             <div class="stolbec">2</div>
           </div>
           <div class="strochka">
-            <div class="stolbec">Жилая площадь</div>
-            <div class="stolbec">48.23</div>
+            <div class="stolbec">Площадь дома</div>
+            <div class="stolbec">48.23 м2</div>
+          </div>
+          <div class="strochka">
+            <div class="stolbec">Площадь участка</div>
+            <div class="stolbec">48.23 соток</div>
           </div>
           <div class="strochka">
             <div class="stolbec">Материал</div>
