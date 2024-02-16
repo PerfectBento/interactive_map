@@ -28,24 +28,25 @@
     background-color: #fceb00;
     color: #6a6a6a;
 }
-.green{
-    background-color: #53fd04;
+.sell{
+    background-color: #fbfbfb;
     color: #6a6a6a;
+    border: 1px solid lightgrey;
 }
-.red{
+.sold{
     background-color: #fc0000;
     color: #fffefe;
 }
-.home_yelow {
-    stroke: #fceb00;
+.home_reservation {
+    /* stroke: #fceb00; */
     fill: #fceb0085;;
 }
-.home_green:hover {
-    stroke: #53fd04;
-    fill: #53fd0483;
+.home_sell {
+    /* stroke: #53fd04; */
+    fill: #fbfbfb83;
 }
-.home_red:hover {
-    stroke: #fc0000;
+.home_sold {
+    /* stroke: #fc0000; */
     fill: #fc000085;
 }
 /* @keyframes hoverElement { /* Сама анимация */

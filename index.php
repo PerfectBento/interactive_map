@@ -19,8 +19,9 @@ $area_homes = getAllAreaHome();
     <svg viewBox="0 0 3428.5713 2664.127">
       <?php
       foreach ($area_homes as $area_home) {
+        $status = ($area_home["status"] == "sold") ? "ОК" : (($area_home["status"] == 2) ? "НЕ ОК" : "хз");
         echo '
-            <path class="home_yelow" data-title="Проект дома Каринтия 112" data-number="' . $area_home['id'] . '"
+            <path class="home_sell" data-title="Проект дома Каринтия 112" data-number="' . $area_home['id'] . '"
             d="' . $area_home['d'] . '">
             </path>
             ';
