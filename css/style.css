@@ -21,13 +21,7 @@
     pointer-events: all; /* Разрешаем быть целью событий мыши */
     cursor: pointer; /* Меняем курсор при наведении */
 }
-/* .home:hover {
-    animation: hoverElement 2s linear infinite; При наведении включаем анимацию
-} */
-.yellow{
-    background-color: #fceb00;
-    color: #6a6a6a;
-}
+
 .sell{
     background-color: #fbfbfb;
     color: #6a6a6a;
@@ -49,17 +43,6 @@
     /* stroke: #fc0000; */
     fill: #fc000085;
 }
-/* @keyframes hoverElement { /* Сама анимация */
-    /* 0% {
-        stroke: #000000;
-    }
-    50% {
-        stroke: #fc0000;
-    }
-    100% {
-        stroke: #000000; 
-    } */
-/* } */ 
 
 .popup.open {
     opacity: 1;

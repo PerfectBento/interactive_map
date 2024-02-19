@@ -30,4 +30,11 @@ function getAllAreaHome()
     $area_homes->execute();
     return $area_homes->fetchAll(PDO::FETCH_ASSOC);
 }
+function getInfoAreaHome($id)
+{
+    $dbh = conncect();
+    $area_homes = $dbh->prepare("SELECT * FROM `area_home` where id = $id");
+    $area_homes->execute();
+    return $area_homes->fetchAll(PDO::FETCH_ASSOC);
+}
 ?>
