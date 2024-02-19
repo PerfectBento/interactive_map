@@ -102,17 +102,48 @@
     width: 47px;
     height: 47px;
     border-radius: 500px;
-    /* background: #e74322; */
     line-height: 48px;
     font-size: 20px;
     margin-left: -24px;
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 6;
 }
 
 .img_wrap .close_block {
     border: none;
+}
+:root {
+    --swiper-navigation-color: rgba(48, 166, 29, 1);
+}
+.interactive_map_swiper {
+  user-select: none;
+  box-sizing: border-box;
+  overflow: hidden;
+  width: 100%;
+  height: 200px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+.interactive_map_swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  overflow: hidden;
+  position: relative;
+  box-sizing: border-box;
+  border-radius: 0px;
+}
+.interactive_map_swiper-slide-image {
+  position: absolute;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
 }
 .modal-return {
     display: flex;

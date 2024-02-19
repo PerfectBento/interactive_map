@@ -11,6 +11,10 @@ $area_homes = getAllAreaHome();
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Интерактивная карта КП-Наследия</title>
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <style>
+
+  </style>
 </head>
 
 <body>
@@ -37,7 +41,29 @@ $area_homes = getAllAreaHome();
     <div class="img_wrap">
       <div class="number"></div>
       <div class="modal-return close_block">Закрыть</div>
-      <img src="https://test.кп-наследие.рф/img/low-finishing.jpg" alt="Черновая отделка" />
+      <div class="interactive_map_swiper">
+        <div class="swiper-wrapper">
+          <div class="interactive_map_swiper-slide swiper-slide">
+            <img class="interactive_map_swiper-slide-image" data-swiper-parallax="30%" loading="lazy"
+              src="https://studio.swiperjs.com/demo-images/nature/01.jpg" />
+          </div>
+
+          <div class="interactive_map_swiper-slide swiper-slide">
+            <img class="interactive_map_swiper-slide-image" data-swiper-parallax="30%" loading="lazy"
+              src="https://studio.swiperjs.com/demo-images/nature/09.jpg" />
+
+          </div>
+
+          <div class="interactive_map_swiper-slide swiper-slide">
+            <img class="interactive_map_swiper-slide-image" data-swiper-parallax="30%" loading="lazy"
+              src="https://studio.swiperjs.com/demo-images/nature/10.jpg" />
+
+          </div>
+        </div>
+
+        <div class="interactive_map_swiper-button-prev swiper-button-prev"></div>
+        <div class="interactive_map_swiper-button-next swiper-button-next"></div>
+      </div>
     </div>
     <div class="description">
       <h4>
@@ -88,5 +114,26 @@ $area_homes = getAllAreaHome();
   </div>
 </div>
 <script src="js/interactive_map.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+<script>
+  var swiper = new Swiper(".interactive_map_swiper", {
+    grabCursor: true,
+    speed: 600,
+    navigation: {
+      prevEl: ".interactive_map_swiper-button-prev",
+      nextEl: ".interactive_map_swiper-button-next",
+    },
+    keyboard: { enabled: true },
+    parallax: { enabled: true },
+    loop: { enabled: true },
+    lazy: { enabled: true },
+    zoom: { minRatio: 10 },
+    watchSlidesProgress: true,
+    observer: true,
+    observeParents: true,
+    threshold: 5,
+  });
+</script>
 
 </html>
