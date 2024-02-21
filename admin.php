@@ -8,7 +8,7 @@ $houses = getAreaHomeOnlyForAdminka();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Заполнение габаритов домов</title>
+    <title>Заполнение данных для Интерактивной карты Наследия</title>
     <meta name="robots" content="noindex, nofollow">
     <style>
         table {
@@ -64,7 +64,6 @@ $houses = getAreaHomeOnlyForAdminka();
         }
 
         .save {
-            width: 50%;
             height: 30px;
             border-radius: 10px;
             border: 1px solid #c9c9c9;
@@ -143,6 +142,6 @@ $houses = getAreaHomeOnlyForAdminka();
     </table>
 </body>
 
-<script src="script.js"></script>
+<script src="js/script.js"></script>
 
 </html>

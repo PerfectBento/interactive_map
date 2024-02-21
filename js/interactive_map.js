@@ -47,3 +47,24 @@ function initializeSwiper() {
     threshold: 5,
   });
 }
+
+$(document).ready(function () {
+  $(".save").click(function () {
+    var id = $(this).data("id");
+    console.log("Значение атрибута data-id нажатой кнопки: " + id);
+    var inputValue = $(this).closest("tr").find("input").val();
+    console.log("Значение input в той же строке: " + inputValue);
+    $.ajax({
+      url: "update_db.php",
+      method: "POST",
+      data: { id: id, value: inputValue },
+      success: function (response) {
+        // Перезагрузить страницу при успешном действии
+        location.reload();
+      },
+      error: function (xhr, status, error) {
+        console.error("Ошибка при отправке данных: " + error);
+      },
+    });
+  });
+});
