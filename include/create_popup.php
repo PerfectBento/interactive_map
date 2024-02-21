@@ -55,11 +55,11 @@ echo '
           </div>
           <div class="strochka">
             <div class="stolbec">Площадь дома</div>
-            <div class="stolbec">' . $data[0]['sq'] . ' м2</div>
+            <div class="stolbec">' . $data[0]['sq'] . ' м²</div>
           </div>
           <div class="strochka">
             <div class="stolbec">Площадь участка</div>
-            <div class="stolbec">' . $data[0]['sq_area'] . 'соток</div>
+            <div class="stolbec">' . $data[0]['sq_area'] . ' соток</div>
           </div>
           <div class="strochka">
             <div class="stolbec">Материал</div>

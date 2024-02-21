@@ -37,4 +37,12 @@ function getInfoAreaHome($id)
     $area_homes->execute();
     return $area_homes->fetchAll(PDO::FETCH_ASSOC);
 }
+
+function getAreaHomeOnlyForAdminka()
+{
+    $dbh = conncect();
+    $area_homes = $dbh->prepare("SELECT * FROM `area_home` where id not in(1,22, 59, 133,134,135,136,137) order by id;");
+    $area_homes->execute();
+    return $area_homes->fetchAll(PDO::FETCH_ASSOC);
+}
 ?>
