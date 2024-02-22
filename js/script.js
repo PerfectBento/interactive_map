@@ -1,23 +1,3 @@
-// $(document).ready(function () {
-//   $(".save").click(function () {
-//     var id = $(this).data("id");
-//     console.log("Значение атрибута data-id нажатой кнопки: " + id);
-//     var inputValue = $(this).closest("tr").find("input").val();
-//     console.log("Значение input в той же строке: " + inputValue);
-//     $.ajax({
-//       url: "update_db.php",
-//       method: "POST",
-//       data: { id: id, value: inputValue },
-//       success: function (response) {
-//         // Перезагрузить страницу при успешном действии
-//         location.reload();
-//       },
-//       error: function (xhr, status, error) {
-//         console.error("Ошибка при отправке данных: " + error);
-//       },
-//     });
-//   });
-// });
 document.querySelectorAll(".save").forEach(function (button) {
   button.addEventListener("click", function () {
     var rowData = {};
@@ -28,8 +8,7 @@ document.querySelectorAll(".save").forEach(function (button) {
       var value = input.value;
       rowData[name] = value;
     });
-    console.log(rowData); // Выводим полученный массив в консоль
-    console.log(id); // Выводим полученный массив в консоль
+
     fetch("./include/update_rows.php", {
       method: "POST",
       headers: {

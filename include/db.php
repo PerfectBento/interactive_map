@@ -45,4 +45,22 @@ function getAreaHomeOnlyForAdminka()
     $area_homes->execute();
     return $area_homes->fetchAll(PDO::FETCH_ASSOC);
 }
+
+function updateHomes($data)
+{
+    $id = $data['id'];
+    $rowData = $data['data'];
+    $sql = 'UPDATE `area_home` SET ';
+    foreach ($rowData as $key => $value) {
+        $sql .= "`$key` = '$value',";
+    }
+    $sql = substr($sql, 0, -1);
+    $sql .= " WHERE `id` = $id";
+    $dbh = conncect();
+    $area_homes = $dbh->prepare("$sql");
+    $area_homes->execute();
+    return $area_homes->rowCount();
+    // return $area_homes->fetchAll(PDO::FETCH_ASSOC);
+    // return $sql;
+}
 ?>
